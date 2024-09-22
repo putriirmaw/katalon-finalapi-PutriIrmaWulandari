@@ -1,0 +1,42 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+BookinAPi,,,,22-09-2024 00:40:30,22-09-2024 00:40:35,5.430s,ERROR
+,,,,,,,
+Test Cases/GET,,,,22-09-2024 00:40:30,22-09-2024 00:40:32,1.950s,PASSED
+"getResponse = sendRequest(findTestObject(""GET""))",,,,22-09-2024 00:40:30,22-09-2024 00:40:32,1.831s,PASSED
+"verifyResponseStatusCode(getResponse, 200)",,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.006s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.003s,PASSED
+result = slurper.parseText(getResponse.getResponseBodyContent()),,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.005s,PASSED
+firstname = firstname,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.002s,PASSED
+assert firstname instanceof java.lang.String,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.001s,PASSED
+lastname = lastname,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.001s,PASSED
+assert lastname instanceof java.lang.String,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.001s,PASSED
+totalprice = totalprice,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.000s,PASSED
+assert totalprice instanceof java.lang.Integer,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.001s,PASSED
+depositpaid = depositpaid,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.000s,PASSED
+assert depositpaid instanceof java.lang.Boolean,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.000s,PASSED
+bookingdates = bookingdates,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.001s,PASSED
+assert bookingdates instanceof java.lang.Object,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.000s,PASSED
+checkin = checkin,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.001s,PASSED
+assert checkin instanceof java.lang.String,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.001s,PASSED
+checkout = checkout,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.001s,PASSED
+assert checkout instanceof java.lang.String,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.000s,PASSED
+additionalneeds = additionalneeds,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.001s,PASSED
+assert additionalneeds instanceof java.lang.String,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.001s,PASSED
+println(getResponse),,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.001s,PASSED
+,,,,,,,
+Test Cases/POST,,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.365s,PASSED
+"postResponse = sendRequest(findTestObject(""POST""))",,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.346s,PASSED
+"verifyResponseStatusCode(postResponse, 200)",,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.002s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.000s,PASSED
+result = slurper.parseText(postResponse.getResponseBodyContent()),,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.000s,PASSED
+println(postResponse),,,,22-09-2024 00:40:32,22-09-2024 00:40:32,0.001s,PASSED
+,,,,,,,
+Test Cases/DELETE,,,,22-09-2024 00:40:35,22-09-2024 00:40:35,0.760s,ERROR
+slurper = new groovy.json.JsonSlurper(),,,,22-09-2024 00:40:35,22-09-2024 00:40:35,0.000s,PASSED
+"getResponseAuth = sendRequest(findTestObject(""auth""))",,,,22-09-2024 00:40:35,22-09-2024 00:40:35,0.339s,PASSED
+"verifyResponseStatusCode(getResponseAuth, 200)",,,,22-09-2024 00:40:35,22-09-2024 00:40:35,0.001s,PASSED
+result = slurper.parseText(getResponseAuth.getResponseBodyContent()),,,,22-09-2024 00:40:35,22-09-2024 00:40:35,0.000s,PASSED
+Auth = token,,,,22-09-2024 00:40:35,22-09-2024 00:40:35,0.001s,PASSED
+println(getResponseAuth),,,,22-09-2024 00:40:35,22-09-2024 00:40:35,0.000s,PASSED
+"delResponse = sendRequest(findTestObject(""DELETE"", [""id"":""4109""]))",,,,22-09-2024 00:40:35,22-09-2024 00:40:35,0.408s,PASSED
+result2 = slurper.parseText(delResponse.getResponseBodyContent()),,,,22-09-2024 00:40:35,22-09-2024 00:40:35,0.001s,ERROR

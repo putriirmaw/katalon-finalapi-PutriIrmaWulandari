@@ -1,0 +1,22 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+BookinAPi,,,,22-09-2024 00:45:30,22-09-2024 00:45:37,6.791s,ERROR
+,,,,,,,
+Test Cases/GET,,,,22-09-2024 00:45:33,22-09-2024 00:45:34,0.358s,FAILED
+"getResponse = sendRequest(findTestObject(""GET""))",,,,22-09-2024 00:45:33,22-09-2024 00:45:34,0.344s,PASSED
+"verifyResponseStatusCode(getResponse, 200)",,,,22-09-2024 00:45:34,22-09-2024 00:45:34,0.004s,FAILED
+,,,,,,,
+Test Cases/POST,,,,22-09-2024 00:45:34,22-09-2024 00:45:34,0.417s,PASSED
+"postResponse = sendRequest(findTestObject(""POST""))",,,,22-09-2024 00:45:34,22-09-2024 00:45:34,0.372s,PASSED
+"verifyResponseStatusCode(postResponse, 200)",,,,22-09-2024 00:45:34,22-09-2024 00:45:34,0.010s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,,22-09-2024 00:45:34,22-09-2024 00:45:34,0.006s,PASSED
+result = slurper.parseText(postResponse.getResponseBodyContent()),,,,22-09-2024 00:45:34,22-09-2024 00:45:34,0.008s,PASSED
+println(postResponse),,,,22-09-2024 00:45:34,22-09-2024 00:45:34,0.002s,PASSED
+,,,,,,,
+Test Cases/DELETE,,,,22-09-2024 00:45:36,22-09-2024 00:45:37,0.808s,ERROR
+slurper = new groovy.json.JsonSlurper(),,,,22-09-2024 00:45:36,22-09-2024 00:45:36,0.000s,PASSED
+"getResponseAuth = sendRequest(findTestObject(""auth""))",,,,22-09-2024 00:45:36,22-09-2024 00:45:37,0.398s,PASSED
+"verifyResponseStatusCode(getResponseAuth, 200)",,,,22-09-2024 00:45:37,22-09-2024 00:45:37,0.002s,PASSED
+result = slurper.parseText(getResponseAuth.getResponseBodyContent()),,,,22-09-2024 00:45:37,22-09-2024 00:45:37,0.000s,PASSED
+Auth = token,,,,22-09-2024 00:45:37,22-09-2024 00:45:37,0.001s,PASSED
+"delResponse = sendRequest(findTestObject(""DELETE"", [""id"":""4109""]))",,,,22-09-2024 00:45:37,22-09-2024 00:45:37,0.395s,PASSED
+result2 = slurper.parseText(delResponse.getResponseBodyContent()),,,,22-09-2024 00:45:37,22-09-2024 00:45:37,0.002s,ERROR

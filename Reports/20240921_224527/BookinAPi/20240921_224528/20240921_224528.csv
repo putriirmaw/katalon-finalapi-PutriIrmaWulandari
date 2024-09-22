@@ -1,0 +1,10 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+BookinAPi,,,,21-09-2024 22:45:29,21-09-2024 22:45:30,0.765s,ERROR
+,,,,,,,
+Test Cases/GET,,,,21-09-2024 22:45:30,21-09-2024 22:45:30,0.024s,FAILED
+"getResponse = sendRequest(findTestObject(""GET""))",,,,21-09-2024 22:45:30,21-09-2024 22:45:30,0.014s,FAILED
+,,,,,,,
+Test Cases/POST,,,,21-09-2024 22:45:30,21-09-2024 22:45:30,0.020s,FAILED
+"postResponse = sendRequest(findTestObject(""POST""))",,,,21-09-2024 22:45:30,21-09-2024 22:45:30,0.012s,FAILED
+,,,,,,,
+Test Cases/DELETE,,,,21-09-2024 22:45:30,21-09-2024 22:45:30,0.019s,ERROR
