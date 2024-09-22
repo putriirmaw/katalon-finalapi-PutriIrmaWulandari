@@ -35,9 +35,12 @@ https://restful-booker.herokuapp.com/apidoc/index.html
 
 	c. Post data bookingid GET 
  		Setting repo POST :
-	 <img width="451" alt="Screenshot 2024-09-22 at 07 58 33" src="https://github.com/user-attachments/assets/4b8a1a90-1cc5-4706-8a1f-a3b59091cace">
+   <img width="534" alt="Screenshot 2024-09-22 at 09 56 21" src="https://github.com/user-attachments/assets/29a416be-42a5-461b-b36b-5f09f7164e1f">
+   
 	d. Delete 
      Setting repo delete :
-	 <img width="534" alt="Screenshot 2024-09-22 at 09 52 28" src="https://github.com/user-attachments/assets/cac4893d-2319-43e6-8951-e468553769b4">
+
+  <img width="534" alt="Screenshot 2024-09-22 at 09 56 03" src="https://github.com/user-attachments/assets/6751d51f-186e-4970-8ad0-844197800f53">
+
 	e. API Chaining Req
  		Gunakan token yang didapat dari hasil generate toke di repo AUTH dan masukkan kedalam HEader pada Repo delete sebagai value Cookies
